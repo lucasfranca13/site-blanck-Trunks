@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* =============================================================
+   BLACK TRUNKS — Design System
+   Premium minimal · preto / off-white quente / accent dourado
+   ============================================================= */
+
+:root {
+  /* Core surfaces */
+  --background: #0a0a0a;
+  --foreground: #f5f2ec;
+
+  --card: #111110;
+  --card-foreground: #f5f2ec;
+
+  --popover: #111110;
+  --popover-foreground: #f5f2ec;
+
+  /* Brand */
+  --primary: #f5f2ec; /* ações principais sobre fundo escuro */
+  --primary-foreground: #0a0a0a;
+
+  --secondary: #1a1a18;
+  --secondary-foreground: #f5f2ec;
+
+  --accent: #c8b89a; /* dourado sóbrio — herdado da marca */
+  --accent-foreground: #0a0a0a;
+
+  /* Neutros */
+  --muted: #1a1a18;
+  --muted-foreground: #9a958c;
+
+  --border: rgba(245, 242, 236, 0.1);
+  --input: rgba(245, 242, 236, 0.14);
+  --ring: #c8b89a;
+
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 0.25rem);
+  --radius-2xl: calc(var(--radius) + 0.75rem);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "cv11", "ss01";
+    /* Trava qualquer scroll horizontal acidental (animações/transforms) */
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+
+  /* Foco visível e acessível em todo elemento interativo */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* Textura de grão (film grain) — riqueza sutil sobre o fundo escuro */
+.texture-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  /* Eyebrow / kicker padrão de marca */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* Respeita usuários que preferem menos movimento */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

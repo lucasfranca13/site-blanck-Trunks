@@ -1,0 +1,495 @@
+/* =============================================
+   BLANCK TRUNCKS — responsive.css
+   Mobile, tablet e notebook
+   ============================================= */
+
+/* ---------- Base fluida ---------- */
+:root {
+  --page-pad-x: clamp(1.25rem, 4.5vw, 4rem);
+  --page-pad-y: clamp(3.25rem, 7vw, 6rem);
+  --nav-offset: calc(1rem + 36px + 1rem);
+}
+
+section {
+  padding: var(--page-pad-y) var(--page-pad-x);
+}
+
+.pillars,
+.partners {
+  padding: var(--page-pad-y) var(--page-pad-x);
+}
+
+.newsletter {
+  padding: var(--page-pad-y) var(--page-pad-x);
+}
+
+footer {
+  padding: var(--page-pad-y) var(--page-pad-x) 2rem;
+}
+
+.stats-bar {
+  padding: 1.75rem var(--page-pad-x);
+}
+
+.social-section {
+  padding: var(--page-pad-y) var(--page-pad-x) clamp(4rem, 8vw, 7rem);
+}
+
+.manifesto {
+  padding-left: var(--page-pad-x);
+  padding-right: var(--page-pad-x);
+}
+
+.divider {
+  margin: 0 var(--page-pad-x);
+}
+
+/* ---------- Toque: cursor normal ---------- */
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+
+  .cursor,
+  .cursor-ring {
+    display: none !important;
+  }
+
+  a,
+  button,
+  .product-card,
+  .partner-card,
+  .stat-item,
+  .nav-cta,
+  .nav-toggle,
+  .newsletter-btn {
+    cursor: pointer;
+  }
+}
+
+/* ---------- Nav (desktop: menu inline) ---------- */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: var(--bt-white);
+  cursor: none;
+  flex-shrink: 0;
+  z-index: 110;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+  border-color: var(--bt-accent);
+  outline: none;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  margin: 0 auto;
+  background: currentColor;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.site-nav.nav-open .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.site-nav.nav-open .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.site-nav.nav-open .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-left: auto;
+}
+
+.nav-cta--drawer {
+  flex-shrink: 0;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+/* ---------- Notebook / tablet largo (≤1200px) ---------- */
+@media (max-width: 1200px) {
+  .site-nav {
+    padding: 1.25rem 2rem;
+  }
+
+  .hero {
+    gap: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .about {
+    gap: 3rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-card:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .footer-top {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-top > div:last-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ---------- Tablet + menu mobile (≤992px) ---------- */
+@media (max-width: 992px) {
+  :root {
+    --nav-offset: calc(1rem + 32px + 1rem);
+  }
+
+  .site-nav {
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 105;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding: calc(var(--nav-offset) + 2rem) 1.5rem 2rem;
+    background: rgba(10, 10, 10, 0.97);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+
+  .site-nav.nav-open .nav-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    letter-spacing: 0.28em;
+  }
+
+  .nav-cta--drawer {
+    width: min(100%, 280px);
+    text-align: center;
+    padding: 14px 28px;
+  }
+
+  .nav-brand {
+    font-size: clamp(13px, 3.8vw, 16px);
+    max-width: min(52vw, 200px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-visual {
+    order: -1;
+  }
+
+  .about-quote {
+    padding: 2rem 1.5rem;
+  }
+
+  .products-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .products-header .btn-ghost {
+    width: 100%;
+    text-align: center;
+  }
+
+  .newsletter {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: var(--page-pad-y) var(--page-pad-x);
+  }
+
+  .newsletter-title {
+    font-size: clamp(1.65rem, 6vw, 2rem);
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+
+  .footer-top > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-top > div:last-child {
+    grid-column: auto;
+    display: block;
+  }
+
+  .footer-tagline {
+    max-width: none;
+  }
+
+  .manifesto {
+    padding: clamp(5rem, 14vw, 7rem) var(--page-pad-x) clamp(4rem, 10vw, 5rem);
+  }
+
+  .manifesto-eagle {
+    margin: 2rem auto;
+  }
+
+  .partners {
+    padding: var(--page-pad-y) var(--page-pad-x);
+  }
+
+  .partners-header .section-title {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+}
+
+/* ---------- Hero mobile (reforço ≤900px) ---------- */
+@media (max-width: 900px) {
+  .hero {
+    padding-left: var(--page-pad-x);
+    padding-right: var(--page-pad-x);
+  }
+
+  .hero-title {
+    font-size: clamp(2.75rem, 12vw, 3.75rem);
+  }
+
+  .hero-desc {
+    max-width: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-ghost {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero .hero-visual {
+    width: 100%;
+  }
+
+  .hero-video {
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .hero-video__badge {
+    bottom: 0.85rem;
+    right: 0.85rem;
+    padding: 0.65rem 0.9rem;
+  }
+
+  .hero-video__badge .eagle-badge-num {
+    font-size: 1.35rem;
+  }
+
+  .hero-bg-text {
+    font-size: 42vw;
+  }
+}
+
+/* ---------- Mobile (≤640px) ---------- */
+@media (max-width: 640px) {
+  :root {
+    --nav-offset: calc(0.85rem + 30px + 0.85rem);
+  }
+
+  .nav-logo-eagle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .product-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .products-header .btn-ghost,
+  .hero-actions .btn-primary,
+  .hero-actions .btn-ghost {
+    padding: 14px 20px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-input {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .manifesto-title {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+
+  .manifesto-body {
+    font-size: 0.92rem;
+    padding: 0 0.25rem;
+  }
+
+  .manifesto-flyer {
+    width: min(120px, 28vw);
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+  }
+
+  .section-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.28em;
+  }
+
+  .about-tags {
+    gap: 8px;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
+
+/* ---------- Mobile pequeno (≤480px) ---------- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(2.35rem, 11vw, 3rem);
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+  }
+
+  .partners-grid {
+    gap: 0;
+  }
+
+  .partner-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .social-title {
+    font-size: clamp(2.25rem, 14vw, 3.25rem);
+  }
+
+  .social-sub {
+    font-size: 0.88rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ---------- Notebook largo: vídeo hero lado a lado ---------- */
+@media (min-width: 901px) and (max-width: 1280px) {
+  .hero {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.75rem, 4.5vw, 4.25rem);
+  }
+
+  .hero-video {
+    min-height: calc(100dvh - var(--nav-offset) - 2rem);
+  }
+}
+
+/* ---------- Desktop muito largo ---------- */
+@media (min-width: 1400px) {
+  .partners-grid,
+  .social-inner {
+    max-width: 1200px;
+  }
+}

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlanckTruncks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav class="site-nav" id="site-nav">
+    <a href="#home" class="nav-logo">
+      <img class="nav-logo-eagle" src="img/BlanckTruncks.png" alt="" width="36" height="36" decoding="async">
+      <span class="nav-brand">BLANCK TRUNCKS</span>
+    </a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="#manifesto">Manifesto</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <a href="produtos.html" class="nav-cta nav-cta--drawer">Ver Coleção</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">BT</div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow fade-up delay-1">Coleção 2026</div>
+      <h1 class="hero-title fade-up delay-2">
+        ELEVE<br>
+        SEU<br>
+        <span>ESTILO</span>
+      </h1>
+      <p class="hero-desc fade-up delay-3">
+        Inspirada na visão aguçada e no voo livre da águia — cada peça carrega força, precisão e identidade sem concessões.
+      </p>
+      <div class="hero-actions fade-up delay-4">
+        <a href="#produtos" class="btn-primary">Explorar Agora</a>
+        <a href="#manifesto" class="btn-ghost">Nossa História</a>
+      </div>
+    </div>
+
+    <div class="hero-visual fade-up delay-3">
+      <div class="hero-video">
+        <video
+          class="hero-video__media"
+          src="videos/WhatsApp Video 2026-05-12 at 18.03.54.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="Vídeo de voo"
+        ></video>
+        <div class="hero-video__shade" aria-hidden="true"></div>
+        <div class="eagle-badge hero-video__badge">
+          <div class="eagle-badge-num">100%</div>
+          <div class="eagle-badge-label">Estilo Autêntico</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar reveal" id="stats" aria-label="Números da BlanckTruncks">
+    <div class="stat-item">
+      <div class="stat-num" data-count="500" data-suffix="+" data-stat-href="#conectar">0</div>
+      <div class="stat-label">Clientes Satisfeitos</div>
+      <span class="stat-hint">Comunidade que voa com a BT</span>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-count="21" data-stat-href="#about">0</div>
+      <div class="stat-label">Anos de Mercado</div>
+      <span class="stat-hint">Tradição com visão de futuro</span>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-count="40" data-suffix="+" data-stat-href="#produtos">0</div>
+      <div class="stat-label">Modelos Exclusivos</div>
+      <span class="stat-hint">Peças com identidade própria</span>
+    </div>
+    <div class="stat-item stat-item--symbol">
+      <div class="stat-num" data-symbol="∞" data-stat-href="#manifesto" aria-hidden="true">∞</div>
+      <div class="stat-label">Atitude</div>
+      <span class="stat-hint">Voar acima da média</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about reveal" id="about">
+    <div class="about-text">
+      <div class="section-eyebrow">A Marca</div>
+      <h2 class="section-title">FEITA PARA QUEM NÃO SE ENCAIXA</h2>
+      <p>A BlanckTruncks nasceu da recusa ao ordinário. Como a águia que não segue o bando, nossa marca foi construída para aqueles que definem seu próprio caminho — com estilo, sem pedir licença.</p>
+      <p>Cada detalhe é trabalhado com a precisão do olhar da águia: cortes limpos, tecidos selecionados, identidade que não se dissolve na multidão.</p>
+      <div class="about-tags">
+        <span class="tag">Premium</span>
+        <span class="tag">Streetwear</span>
+        <span class="tag">Identidade</span>
+        <span class="tag">Exclusivo</span>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="about-quote">
+        "Assim como a águia enxerga além do horizonte, nossa moda <em>carrega visão</em> em cada costura."
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products reveal" id="produtos">
+    <div class="products-header">
+      <div>
+        <div class="section-eyebrow">Coleção</div>
+        <h2 class="section-title">PEÇAS EM DESTAQUE</h2>
+      </div>
+      <a href="produtos.html" class="btn-ghost">Ver Todos</a>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-number">01 / 03</div>
+        <div class="product-img">
+          <img src="img/produtos/classic.JPG" alt="Eagle Classic Tee" loading="lazy" width="800" height="600" decoding="async">
+        </div>
+        <div class="product-name">Eagle Classic Tee</div>
+        <p class="product-desc">Camiseta premium com estampa da águia em silk de alta resolução. Algodão 100% penteado.</p>
+        <div class="product-price">R$ 189</div>
+      </div>
+      <div class="product-card">
+        <div class="product-number">02 / 03</div>
+        <div class="product-img">
+          <img src="img/produtos/concrete jungle c.JPG" alt="BT Signature Hoodie" loading="lazy" width="800" height="600" decoding="async">
+        </div>
+        <div class="product-name">BT Signature Hoodie</div>
+        <p class="product-desc">Moletom oversized com logo bordado. Forro interno extra macio para conforto máximo.</p>
+        <div class="product-price">R$ 349</div>
+      </div>
+      <div class="product-card">
+        <div class="product-number">03 / 03</div>
+        <div class="product-img">
+          <img src="img/produtos/bt tree c.JPG" alt="Tactical Cap BT" loading="lazy" width="800" height="600" decoding="async">
+        </div>
+        <div class="product-name">Tactical Cap BT</div>
+        <p class="product-desc">Cap 6 panels com logo metálico. Aba pré-curvada, ajuste snapback. Edição limitada.</p>
+        <div class="product-price">R$ 129</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto reveal" id="manifesto">
+    <div class="manifesto-flyer" aria-hidden="true">
+      <img src="img/voodesenho-removebg-preview.png" alt="" width="320" height="320" decoding="async">
+    </div>
+    <div class="manifesto-content">
+      <h2 class="manifesto-title">
+        <span class="manifesto-title-row">
+          <span class="manifesto-title-glyph">
+            <img class="manifesto-mark" src="img/Logorabisco-removebg-preview.png" alt="" width="96" height="96" decoding="async" aria-hidden="true">
+            <span class="manifesto-title-letter">V</span>
+          </span>OAREMOS
+        </span><br>
+        <span class="manifesto-title-row">MAIS ALTO</span>
+      </h2>
+      <svg class="manifesto-eagle" viewBox="0 0 120 120">
+        <circle cx="55" cy="55" r="50" fill="#0a0a0a"/>
+        <path d="M20 62 C20 62 32 45 50 40 C64 36 76 42 88 34 C94 30 100 24 106 18 C104 30 95 40 86 50 C80 57 84 62 80 70 C76 78 62 88 50 90 C38 92 26 82 20 70 C16 64 20 62 20 62Z" fill="white"/>
+        <circle cx="80" cy="38" r="5" fill="white"/>
+        <circle cx="82" cy="36" r="2" fill="#0a0a0a"/>
+      </svg>
+      <p class="manifesto-body">
+        A águia não pede permissão para voar alto. Não segue correntes, não aceita limites impostos. É livre, feroz e elegante ao mesmo tempo. Essa é a filosofia da BlanckTruncks — moda para quem carrega essa mesma chama.
+      </p>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="pillars reveal pillars--orbit" id="essencia">
+    <header class="pillars-header">
+      <div class="section-eyebrow">Por Que BT</div>
+      <h2 class="section-title">NOSSA ESSÊNCIA</h2>
+    </header>
+    <div class="pillars-orbit">
+      <div class="pillar">
+        <div class="pillar-icon">◈</div>
+        <div class="pillar-name">Visão Aguçada</div>
+        <p class="pillar-desc">Cada detalhe é analisado com precisão. Nada passa despercebido no processo criativo da BT.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">◉</div>
+        <div class="pillar-name">Voo Livre</div>
+        <p class="pillar-desc">Sem fórmulas prontas. Criamos peças que se recusam a se encaixar em caixinhas de tendência.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">◆</div>
+        <div class="pillar-name">Força Silenciosa</div>
+        <p class="pillar-desc">Impacto sem barulho. Qualidade que fala por si mesma — sem precisar gritar.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">▲</div>
+        <div class="pillar-name">Alto Padrão</div>
+        <p class="pillar-desc">Materiais premium, acabamento impecável. Porque quem voa alto merece o melhor.</p>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="eagle-container">
+        <div class="eagle-circle">
+          <div class="eagle-ring"></div>
+          <div class="eagle-ring-2"></div>
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="190" cy="190" r="175" fill="#f5f2ec"/>
+            <path d="M80 210 C80 210 100 165 140 148 C175 133 215 150 255 130 C278 118 305 95 328 78 C322 112 295 138 278 162 C262 184 268 202 264 222 C258 248 232 272 200 280 C168 288 136 272 112 248 C94 228 80 210 80 210Z" fill="#0a0a0a"/>
+            <path d="M80 210 C80 210 62 218 50 210 C42 204 44 195 52 192 C60 189 72 196 80 210Z" fill="#0a0a0a"/>
+            <circle cx="238" cy="144" r="14" fill="#0a0a0a"/>
+            <circle cx="242" cy="140" r="4" fill="#f5f2ec"/>
+            <path d="M200 280 C200 280 175 295 156 315 C142 330 138 350 138 350 L118 344 C118 344 126 318 145 300 C164 282 200 280 200 280Z" fill="#0a0a0a"/>
+            <path d="M140 160 C160 155 185 158 210 148" stroke="#f5f2ec" stroke-width="2" fill="none" opacity="0.3"/>
+            <path d="M160 172 C180 166 205 168 230 158" stroke="#f5f2ec" stroke-width="2" fill="none" opacity="0.2"/>
+            <path d="M90 245 L105 260 L85 270 L108 278 L92 292 L120 288 L108 305" fill="none" stroke="#0a0a0a" stroke-width="3"/>
+            <text x="240" y="360" font-family="'Black Han Sans', sans-serif" font-size="52" fill="#0a0a0a" letter-spacing="2">BT</text>
+          </svg>
+        </div>
+        <div class="eagle-badge">
+          <div class="eagle-badge-num">100%</div>
+          <div class="eagle-badge-label">Estilo Autêntico</div>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- PARCEIROS -->
+  
+  <section class="partners reveal" id="parceiros">
+    <div class="partners-header">
+      <div class="section-eyebrow section-eyebrow--center">Parceiros &amp; apoiadores</div>
+      <h2 class="section-title">QUEM VOA<br>COM A GENTE</h2>
+      <p class="partners-sub">Marcas e escolas que confiam na BlanckTruncks.</p>
+    </div>
+    <div class="partners-grid">
+      <div class="partner-card">
+        <div class="partner-logo-frame">
+          <img class="partner-logo-img" src="img/parceiros/parceiro-01.png" alt="SkyBrasil" loading="lazy" width="200" height="100" decoding="async">
+        </div>
+        <p class="partner-name">SkyBrasil</p>
+        <p class="partner-type">Escola de voo livre</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo-frame">
+          <img class="partner-logo-img" src="img/parceiros/parceiro-02.png" alt="Aeroclub" loading="lazy" width="200" height="100" decoding="async">
+        </div>
+        <p class="partner-name">Aeroclub</p>
+        <p class="partner-type">Clube de parapente</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo-frame">
+          <img class="partner-logo-img" src="img/parceiros/parceiro-03.png" alt="Altus Gear" loading="lazy" width="200" height="100" decoding="async">
+        </div>
+        <p class="partner-name">Altus Gear</p>
+        <p class="partner-type">Equipamentos técnicos</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo-frame">
+          <img class="partner-logo-img" src="img/parceiros/parceiro-04.png" alt="Fly Minas" loading="lazy" width="200" height="100" decoding="async">
+        </div>
+        <p class="partner-name">Fly Minas</p>
+        <p class="partner-type">Associação MG</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo-frame">
+          <img class="partner-logo-img" src="img/parceiros/parceiro-05.png" alt="Condor Pro" loading="lazy" width="200" height="100" decoding="async">
+        </div>
+        <p class="partner-name">Condor Pro</p>
+        <p class="partner-type">Wingsuit team</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo-frame">
+          <img class="partner-logo-img" src="img/parceiros/parceiro-06.png" alt="Vento Livre" loading="lazy" width="200" height="100" decoding="async">
+        </div>
+        <p class="partner-name">Vento Livre</p>
+        <p class="partner-type">Escola acrobática</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo-frame">
+          <img class="partner-logo-img" src="img/parceiros/parceiro-07.png" alt="Summit BH" loading="lazy" width="200" height="100" decoding="async">
+        </div>
+        <p class="partner-name">Summit BH</p>
+        <p class="partner-type">Loja especializada</p>
+      </div>
+      <a href="#conectar" class="partner-card partner-card--join">
+        <div class="partner-logo-frame partner-logo-frame--join">
+          <span class="partner-join-icon" aria-hidden="true">+</span>
+        </div>
+        <p class="partner-name">Seja parceiro</p>
+        <p class="partner-type">Fale com a gente</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+
+
+
+
+
+
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter reveal" id="contato">
+    <div>
+      <div class="section-eyebrow">Fique por Dentro</div>
+      <h2 class="newsletter-title">DROPS EXCLUSIVOS<br>NO SEU E-MAIL</h2>
+      <p class="newsletter-desc">
+        Lançamentos antes de todo mundo, promoções exclusivas e acesso antecipado às novas coleções.
+      </p>
+    </div>
+    <div>
+      <div class="newsletter-form">
+        <input type="email" placeholder="seu@email.com" class="newsletter-input">
+        <button class="newsletter-btn">Inscrever</button>
+      </div>
+      <p class="newsletter-fine">Sem spam. Só o que importa. Cancele quando quiser.</p>
+    </div>
+  </section>
+
+
+
+
+  <!-- CONECTE-SE -->
+  <section class="social-section reveal" id="conectar">
+    <div class="social-inner">
+      <div class="section-eyebrow section-eyebrow--center social-eyebrow">Siga o voo</div>
+      <h2 class="social-title">
+        <span class="social-title-line">CONECTE</span>
+        <span class="social-title-line social-title-line--with-mark">
+          SE
+          <span class="social-title-mark" aria-hidden="true"><span class="social-title-mark-inner"></span></span>
+        </span>
+      </h2>
+      <p class="social-sub">Conteúdo diário de voo, novidades e lançamentos exclusivos</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/blacktrunksbrasil?igsh=MTd2aGFteXZtam8yaQ==" class="social-btn social-btn--primary" target="_blank" rel="noopener noreferrer">
+          <svg class="social-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+          @BLANCKTRUNCKS
+        </a>
+        <a href="https://wa.me/5531999999999" class="social-btn social-btn--ghost" target="_blank" rel="noopener noreferrer">
+          <svg class="social-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+          WhatsApp
+        </a>
+        <a href="mailto:contato@blancktruncks.com" class="social-btn social-btn--ghost">
+          <svg class="social-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          E-mail
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img class="footer-brand-logo" src="img/BlanckTruncks.png" alt="" width="28" height="28" decoding="async">
+          <span class="footer-brand-name">BLANCK TRUNCKS</span>
+        </div>
+        <p class="footer-tagline">Moda para quem voa acima da média. Estilo, força e identidade em cada peça.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navegação</div>
+        <ul class="footer-links">
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="#manifesto">Manifesto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Ajuda</div>
+        <ul class="footer-links">
+          <li><a href="#">Trocas e Devoluções</a></li>
+          <li><a href="#">Guia de Tamanhos</a></li>
+          <li><a href="#">Fale Conosco</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Social</div>
+        <ul class="footer-links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 BlanckTruncks. Todos os direitos reservados.</span>
+      <span class="footer-copy footer-copy-accent">Feito com ◈ para quem voa alto</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
